@@ -1,11 +1,16 @@
 \documentclass[dvipdfmx]{jsarticle}
+\usepackage{tikz-cd}
 \begin{document}
 
-吾輩は猫である。名前はまだ無い。
+\begin{tikzcd}
+  a \arrow[d, "f"', shift right] \arrow[d,"g", shift left] \arrow[dr,"i"] \\
+  b \arrow[r,"h"'] & c
+\end{tikzcd}
 
-どこで生れたかとんと見当がつかぬ。
-何でも薄暗いじめじめした所で
-ニャーニャー泣いていた事だけは記憶している。
-吾輩はここで始めて人間というものを見た。
+\begin{tikzcd}
+  & w \arrow[ddl,"f_0"'] \arrow[ddr,"f_1"] & \\
+  \\
+  a_{f_0} & & a_{f_1}
+\end{tikzcd}
 
 \end{document}
