@@ -1,0 +1,43 @@
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}
+
+  \draw (0,0)
+  node{
+    \begin{tikzcd}
+      & w_A \arrow[ddl,"f_0"'] \arrow[ddr,"f_1"] & \\
+      \\
+      a_0 & & a_1
+    \end{tikzcd}
+  }
+  node at ++(90:2.5){
+    \begin{tikzpicture}
+    \filldraw[fill=white, draw=white] (0,0)
+    node{$A$}
+    circle [radius=0.3];
+    \end{tikzpicture}
+  }
+  circle [radius=2.5];
+
+  \draw (6,0)
+  node{
+    \begin{tikzcd}
+      & w_B \arrow[ddl,"g_0"'] \arrow[ddr,"g_1"] & \\
+      \\
+      b_0 \arrow[rr,"t_0"] & & b_1
+    \end{tikzcd}    
+  }
+  node at ++(90:2.5){
+    \begin{tikzpicture}
+    \filldraw[fill=white, draw=white] (0,0)
+    node{$B$}
+    circle [radius=0.3];
+    \end{tikzpicture}
+  }
+  circle [radius=2.5];
+
+\end{tikzpicture}
+\end{document}
