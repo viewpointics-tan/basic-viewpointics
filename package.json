@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/viewpointics-tan/basic-viewpointics/issues"
   },
-  "homepage": "https://github.com/viewpointics-tan/basic-viewpointics#readme"
+  "homepage": "https://github.com/viewpointics-tan/basic-viewpointics#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
