@@ -37,7 +37,7 @@ diagram:
 
 # make clean-latex: 生成した可換図式 (LaTeX) を削除する
 .PHONY: clean-diagram
-clean-latex:
+clean-diagram:
 	rm -rf $(output_dir_latex)/
 
 # make clean: 生成したファイル群を削除する
