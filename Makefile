@@ -36,14 +36,14 @@ diagram:
 	ls $(output_dir_latex)/*.pdf | xargs -I {} pdfcrop {}
 
 # make clean-latex: 生成した可換図式 (LaTeX) を削除する
-.PHONY: clean-latex
+.PHONY: clean-diagram
 clean-latex:
 	rm -rf $(output_dir_latex)/
 
 # make clean: 生成したファイル群を削除する
 .PHONY: clean
 clean:
-	make clean-latex
+	make clean-diagram
 
 # .PHONY: list
 # list:
