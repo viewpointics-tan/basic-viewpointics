@@ -1,0 +1,14 @@
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage{tikz-cd}
+\pagestyle{empty}
+\begin{document}
+
+\begin{tikzcd}
+  A
+    \arrow[rr,"F"{name=F},bend left]
+    \arrow[rr,"G"'{name=G},bend right]
+  && B
+  \arrow[Rightarrow,from=F,to=G,shorten=3,"\alpha"]
+\end{tikzcd}
+
+\end{document}
