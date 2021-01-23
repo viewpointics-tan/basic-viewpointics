@@ -32,7 +32,7 @@ pandoc_options += --data-dir=.
 pandoc_options += --katex=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/
 pandoc_options += --template=elegant_bootstrap_menu.html
 pandoc_options += -M title="視点学の基礎"
-pandoc_options += -M author="視点学たん"
+pandoc_options += -M author="視点学たん (@viewpointicstan)"
 
 # --------------------------------------------------------
 # ビルドルール（PDF生成用）
@@ -44,7 +44,6 @@ pandoc_options += -M author="視点学たん"
 # HTMLを生成する
 .PHONY: html
 html: 
-	make clean-html
 	pandoc $(input_files_md) $(pandoc_options) -o $(output_file_html) 
 
 # make diagram: 可換図式 (LaTeX) を out/ 以下に生成する
