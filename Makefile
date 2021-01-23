@@ -26,7 +26,6 @@ output_file_html := index.html
 pandoc_options := --standalone
 pandoc_options += --number-section
 pandoc_options += --toc
-pandoc_options += --shift-heading-level-by=0
 pandoc_options += -f markdown+tex_math_single_backslash
 pandoc_options += --data-dir=.
 pandoc_options += --katex=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/
