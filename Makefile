@@ -12,13 +12,27 @@ SHELL := /bin/bash
 input_dir_md     := src
 input_dir_latex  := src/LaTeX
 output_dir_latex := src/LaTeX/out
-output_dir_img   := src/img
+output_dir_img   := img
 config_dir       := config
 
 # 入力ファイル（Markdown）
-# 01_ のような接頭辞の順に、ファイルをソートして並べる
-# ただし「執筆用メモ」は除外する
-input_files_md := $(sort $(wildcard $(input_dir_md)/**/*.md))
+# 101_ のような接頭辞の順に、ファイルをソートして並べる
+input_files_md := $(sort $(wildcard $(input_dir_md)/*.md))
+
+# 出力ファイル
+output_file_html := index.html
+
+# Pandocのオプション
+pandoc_options := --standalone
+pandoc_options += --number-section
+pandoc_options += --toc
+pandoc_options += --shift-heading-level-by=-2
+pandoc_options += -f markdown+tex_math_single_backslash
+pandoc_options += --data-dir=.
+pandoc_options += --katex=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/
+pandoc_options += --template=elegant_bootstrap_menu.html
+pandoc_options += -M title="視点学の基礎"
+pandoc_options += -M author="視点学たん"
 
 # --------------------------------------------------------
 # ビルドルール（PDF生成用）
@@ -29,8 +43,9 @@ input_files_md := $(sort $(wildcard $(input_dir_md)/**/*.md))
 
 # HTMLを生成する
 .PHONY: html
-html:
-
+html: 
+	make clean-html
+	pandoc $(input_files_md) $(pandoc_options) -o $(output_file_html) 
 
 # make diagram: 可換図式 (LaTeX) を out/ 以下に生成する
 .PHONY: diagram
@@ -53,6 +68,7 @@ diagram:
 	  sed -e 's/.pdf//' | \
 	  xargs -I {} pdftoppm -png -singlefile {}.pdf {}
 	# PNG画像をimgディレクトリに移動
+	mkdir -p $(output_dir_img)
 	mv $(output_dir_latex)/*.png $(output_dir_img)
 
 # make clean-latex: 生成した可換図式 (LaTeX) を削除する
@@ -60,12 +76,14 @@ diagram:
 clean-diagram:
 	rm -rf $(output_dir_latex)/
 
+# make clean-html: 生成したHTMLを削除する
+.PHONY: clean-html
+clean-html:
+	rm -f $(output_file_html)
+
 # make clean: 生成したファイル群を削除する
 .PHONY: clean
 clean:
 	make clean-diagram
-
-# .PHONY: list
-# list:
-# 	echo $(input_files_md) | tr ' ' '\n'
+	make clean-html
 
