@@ -5,12 +5,6 @@
   "repository": "https://github.com/viewpointics-tan/basic-viewpointics.git",
   "author": "viewpointics-tan <viewpointicstan@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "markdown-it": "^12.0.4",
-    "ts-node": "^9.1.1"
-  },
-  "devDependencies": {
-    "@types/markdown-it": "^12.0.1",
-    "@types/node": "^14.14.22"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
