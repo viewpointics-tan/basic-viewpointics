@@ -1,8 +1,20 @@
 # 視点学の基礎（仮題）
 
+視点学たん ([@viewpointicstan](https://twitter.com/viewpointicstan))
+
 （書きかけです）
 
 ## ビルド方法
+
+### 本文
+
+```
+# 本文のHTMLを index.html として生成する
+$ make html
+
+# 生成した index.html を削除する
+$ make clean-html
+```
 
 ### 可換図式
 
