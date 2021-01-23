@@ -22,11 +22,14 @@ $$
 - **結合法則**：任意の\(f \in A(a,b), g \in A(b,c), h \in A(c,d)\)について\((h \circ g) \circ f = h \circ (g \circ f)\)が成り立つ
 - **単位法則**：任意の\(f \in A(a,b)\)について\(f \circ 1_a = f = 1_b \circ f\)が成り立つ
 
-<div style="text-align:center">
-  <img src="../img/1-1_category_example.png">
+<!-- <div style="text-align:center">
+  <img src="img/1-1_category_example.png">
   <div>図1-1 圏の例</div>
 </div>
-<br/>
+<br/> -->
+
+![図1-1 圏の例](./img/1-1_category_example.png)
+
 簡単のため、以下の記法が使われることがあります。
 
 $$
@@ -47,11 +50,13 @@ $$
 ##### 定義1-3 始対象
 \(A\)を圏とします。対象\(w \in A\)が**始対象**であるとは、任意の\(a \in A\)についてただひとつの射\(w \to a\)が存在することをいいます。
 
-<div style="text-align:center">
-  <img src="../img/1-2_initial_object_example.png">
+<!-- <div style="text-align:center">
+  <img src="img/1-2_initial_object_example.png">
   <div>図1-2 始対象の例</div>
 </div>
-<br/>
+<br/> -->
+
+![図1-2 始対象の例](./img/1-2_initial_object_example.png)
 
 #### 観測者の定義
 
@@ -61,12 +66,13 @@ $$
 
 注：この定義は、読者が想像する観測者のイメージとはあまりにかけ離れているかもしれません。しかしながら、この方法で定義された観測者は、一般にイメージされる「人間的な」観測者ならびに観測装置を単純化・抽象化したものであり、現実における「人間的な」観測者とおおむね対応します。
 
-<div style="text-align:center">
-  <img src="../img/2-1_observer_example.png">
+<!-- <div style="text-align:center">
+  <img src="img/2-1_observer_example.png">
   <div>図1-3 観測者の例</div>
 </div>
-<br/>
+<br/> -->
 
+![図1-3 観測者の例](./img/2-1_observer_example.png)
 
 定義より、以下の命題が直ちに従います。
 - 観測者を定めたとき、観測者には必ず世界対象が存在する。

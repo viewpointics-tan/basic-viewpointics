@@ -4,19 +4,23 @@
 
 ##### 定義3-1 可換図式
 例えば下の図において、**図式が可換である**とは\(gf=jih\)が成り立つことをいいます。一般的に、図式が可換であるとは、対象\(x\)から\(y\)への経路が2つ以上あるならばそのすべてについて、経路に沿った合成で得られる\(x\)から\(y\)への射が等しいことをいいます。
-<div style="text-align:center">
-  <img src="../img/3-1_commutative_diagram.png">
+<!-- <div style="text-align:center">
+  <img src="img/3-1_commutative_diagram.png">
   <div>図3-1 図式の例</div>
 </div>
-<br/>
+<br/> -->
+
+![図3-1 図式の例](./img/3-1_commutative_diagram.png)
 
 ##### 定義3-2 積
 \(A\)を圏とします。対象\(x,y \in A\)について、\(x\)と\(y\)の**積**とは、下の図式における\(p,p_0,p_1\)の組であり、「任意の\(a \in \mathrm{ob}(A),f_0 \in A(a,x), f_1 \in A(a,y)\)に対し以下の図式を可換にする射\(f:a \to p\)がだたひとつ存在する」という条件を満たすもののことです。
-<div style="text-align:center">
-  <img src="../img/3-2_product.png">
+<!-- <div style="text-align:center">
+  <img src="img/3-2_product.png">
   <div>図3-2 積の定義</div>
 </div>
-<br/>
+<br/> -->
+
+![図3-2 積の定義](./img/3-2_product.png)
 
 ##### 定義3-3 関手
 \(A,B\)を圏とします。**関手**\(F:A \to B\)とは、
@@ -63,19 +67,26 @@ $$
 
 ##### 定義3-7 自然変換
 \(A,B\)を圏とし、\(F,G:A \to B\)を関手とします。**自然変換**\(\alpha :F \to G\)とは\(B\)における射の集まり\((F(a) \overset{\alpha_a}{\to} G(a))_{a \in A}\)であって、\(A\)の任意の射\(a \overset{f}{\to} a'\)について、以下の図式を可換にするものをいいます。射\(\alpha_a\)は\(\alpha\)の**成分**と呼ばれます。
-<div style="text-align:center">
-  <img src="../img/3-7_natural_transformation.png">
+
+<!-- <div style="text-align:center">
+  <img src="img/3-7_natural_transformation.png">
   <div>図3-4 自然変換の定義</div>
 </div>
-<br/>
+<br/> -->
+
+![図3-4 自然変換の定義](./img/3-7_natural_transformation.png)
 
 注1：自然変換は、**関手から関手への射**として解釈できます。射の間に射があるという、少々奇妙な概念です。
 注2：自然変換\(\alpha\)は、以下のように図示されることがあります。
+
+<!-- 
 <div style="text-align:center">
-  <img src="../img/3-7-2_NT_arrow.png">
+  <img src="img/3-7-2_NT_arrow.png">
   <div>図3-5 自然変換の図示</div>
 </div>
-<br/>
+<br/> -->
+
+![図3-5 自然変換の図示](./img/3-7-2_NT_arrow.png)
 
 ##### 定義3-8 同型射、逆射
 圏\(A\)の射\(f:a \to b\)が**同型射**であるとは、射\(g:b \to a\)が存在して\(gf=1_a\)かつ\(fg=1_b\)となることをいいます。このとき、\(g\)は\(f\)の**逆射**と呼ばれ、\(g=f^{-1}\)と書かれます。\(a\)から\(b\)に同型射が存在するとき、\(a\)と\(b\)は**同型である**といい、\(a \cong b\)と書きます。
@@ -85,11 +96,13 @@ $$
 ##### 定義3-9
 \(A,B\)を観測者とします。\(A\)が\(B\)について**部分視している**とは、以下の図式において\(H^{w_A}\circ p_A\)から\(H^{w_B}\circ p_B\)への自然変換\(\alpha\)が存在することをいいます。また、この\(\alpha\)のことを\(A\)から\(B\)への**部分視**といいます。ただし、\(p_A,p_B\)はそれぞれ\(A\times B\)から\(A,B\)への射影、\(H^{w_A},H^{w_B}\)はそれぞれ\(A,B\)から\(\textbf{Set}\)への世界対象に関するHom関手です。
 
-<div style="text-align:center">
-  <img src="../img/3-8_partial_viewing.png">
+<!-- <div style="text-align:center">
+  <img src="img/3-8_partial_viewing.png">
   <div>図3- 部分視の定義</div>
 </div>
-<br/>
+<br/> -->
+
+![図3- 部分視の定義](./img/3-8_partial_viewing.png)
 
 #### 同じものを見ていることの定義
 
