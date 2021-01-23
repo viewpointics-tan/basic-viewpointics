@@ -25,7 +25,12 @@ input_files_md := $(sort $(wildcard $(input_dir_md)/**/*.md))
 # --------------------------------------------------------
 
 # make と打ったときのデフォルトターゲット
-.DEFAULT_GOAL := print
+.DEFAULT_GOAL := html
+
+# HTMLを生成する
+.PHONY: html
+html:
+
 
 # make diagram: 可換図式 (LaTeX) を out/ 以下に生成する
 .PHONY: diagram
@@ -49,10 +54,6 @@ diagram:
 	  xargs -I {} pdftoppm -png -singlefile {}.pdf {}
 	# PNG画像をimgディレクトリに移動
 	mv $(output_dir_latex)/*.png $(output_dir_img)
-
-.PHONY: test
-test:
-	cd $(output_dir_latex) && ls *-crop.pdf | sed -e 's/-crop.pdf//' | xargs -I {} echo {}-crop.pdf {}.pdf 
 
 # make clean-latex: 生成した可換図式 (LaTeX) を削除する
 .PHONY: clean-diagram
