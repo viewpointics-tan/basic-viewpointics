@@ -24,7 +24,7 @@ output_file_html := index.html
 
 # Pandocのオプション
 pandoc_options := --standalone
-pandoc_options += --number-section
+# pandoc_options += --number-section
 pandoc_options += --toc
 pandoc_options += -f markdown+tex_math_single_backslash
 pandoc_options += --data-dir=.
